@@ -1,28 +1,37 @@
 package classes;
 
 public class Driver {
-    private Car car;
+    private IDrivable car;
 
     // could have an empty constructor here if the driver doesn't necessarily
     // need a car
-    public Driver (Car car) {
+    public Driver (IDrivable car) {
         this.car = car;
     }
 
-    public Car getCar() {
+    public IDrivable getCar() {
         return car;
     }
-    public void setCar(Car car){
+    public void setCar(IDrivable car){
         this.car = car;
     }
 
-    public void driveCar(double miles, double x, double y){
-        car.increaseMiles(miles);
-        car.moveCar(x, y);
-        if (this.car.getClass() == Convertible.class) {
-            ((Convertible) this.car).changeRoofPosition();
-        } else if(this.car.getClass() == Supercar.class) {
-            ((Supercar) this.car).changeSportMode();
+    public String driveCar(double miles, double x, double y){
+//        car.increaseMiles(miles);
+        car.Drive(miles);
+        Class sc = this.car.getClass();
+        if (this.car.getClass() == Car.class || sc.getSuperclass() == Car.class) {
+            ((Car) this.car).moveCar(x, y);
+            if (this.car.getClass() == Convertible.class) {
+                ((Convertible) this.car).changeRoofPosition();
+            } else if(this.car.getClass() == Supercar.class) {
+                ((Supercar) this.car).changeSportMode();
+            }
+            return "Total miles: " + ((Car) this.car).getMiles() + ", " +
+                    "Current Position: (" + ((Car) this.car).getPosition().getX()
+                    + ", " + ((Car) this.car).getPosition().getY() + ")";
+        } else {
+            return "You're not driving a car";
         }
     }
 }

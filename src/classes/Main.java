@@ -20,11 +20,11 @@ public class Main {
 //        System.out.println(c1);
 
         Convertible elise = new Convertible("yellow", "HS20 HJK",
-                "Elise", "Lotue", 0);
+                "Elise", "Lotus", 0);
         Supercar charger = new Supercar("black", "EO34 DER",
                 "F1","Ferrari",0);
 //        System.out.println(elise);
-        alex.setCar(elise);
+        alex.setCar(c1);
 //        alex.driveCar(20,5,15);
 //        System.out.println(elise);
 //        System.out.println(elise.isRoofDown());
@@ -32,13 +32,15 @@ public class Main {
 //        System.out.println(elise.isRoofDown());
 //        elise.changeRoofPosition();
 //        System.out.println(elise.isRoofDown());
-        alex.driveCar(10,10,10);
-        System.out.println(elise.isRoofDown());
-        alex.setCar(charger);
-        alex.driveCar(20,6,7);
-        System.out.println(charger.isSportMode());
-        alex.driveCar(20,6,7);
-        System.out.println(charger.isSportMode());
+        System.out.println(alex.driveCar(10,10,10));
+//        System.out.println(elise.isRoofDown());
+//        alex.setCar(charger);
+        System.out.println(alex.driveCar(20,6,7));
+//        System.out.println(charger.isSportMode());
+        System.out.println(alex.driveCar(20,6,7));
+//        System.out.println(charger.isSportMode());
+//        System.out.println(elise);
+        System.out.println(Car.class.getSuperclass());
 
     }
 

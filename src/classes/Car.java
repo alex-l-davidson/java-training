@@ -1,6 +1,6 @@
 package classes;
 
-public class Car {
+public class Car implements IDrivable{
 
     private String color;
     private String reg;
@@ -73,17 +73,20 @@ public class Car {
 //        this.miles = miles;
 //    }
     // increaseMiles function (called by driveCar function in Driver class)
-    public double increaseMiles(double newMiles) {
-        this.miles = this.miles + newMiles;
-        return this.miles;
-    }
+//    public double increaseMiles(double newMiles) {
+//        this.miles = this.miles + newMiles;
+//        return this.miles;
+//    }
 
     //this isn't working as I want, because I want to add the coordinates to the previous
     public void moveCar(double x, double y) {
         position.setX(position.getX()+x);
         position.setY(position.getY()+y);
     }
-
-
-
+    //implementing IDrivable (replacing increaseMiles function)
+    @Override
+    public double Drive(double miles) {
+        this.miles = this.miles + miles;
+        return this.miles;
+    }
 }
