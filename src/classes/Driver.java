@@ -18,7 +18,7 @@ public class Driver {
 
     public String driveCar(double miles, double x, double y){
 //        car.increaseMiles(miles);
-        car.Drive(miles);
+        car.drive(miles);
         Class sc = this.car.getClass();
         if (this.car.getClass() == Car.class || sc.getSuperclass() == Car.class) {
             ((Car) this.car).moveCar(x, y);

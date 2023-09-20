@@ -1,5 +1,5 @@
 package classes;
 
 public interface IDrivable {
-    public double Drive(double miles);
+    public double drive(double miles);
 }

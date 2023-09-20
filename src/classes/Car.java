@@ -85,7 +85,7 @@ public class Car implements IDrivable{
     }
     //implementing IDrivable (replacing increaseMiles function)
     @Override
-    public double Drive(double miles) {
+    public double drive(double miles) {
         this.miles = this.miles + miles;
         return this.miles;
     }

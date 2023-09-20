@@ -24,7 +24,7 @@ public class Main {
         Supercar charger = new Supercar("black", "EO34 DER",
                 "F1","Ferrari",0);
 //        System.out.println(elise);
-        alex.setCar(c1);
+//        alex.setCar(c1);
 //        alex.driveCar(20,5,15);
 //        System.out.println(elise);
 //        System.out.println(elise.isRoofDown());
@@ -32,15 +32,26 @@ public class Main {
 //        System.out.println(elise.isRoofDown());
 //        elise.changeRoofPosition();
 //        System.out.println(elise.isRoofDown());
-        System.out.println(alex.driveCar(10,10,10));
+//        System.out.println(alex.driveCar(10,10,10));
 //        System.out.println(elise.isRoofDown());
 //        alex.setCar(charger);
-        System.out.println(alex.driveCar(20,6,7));
+//        System.out.println(alex.driveCar(20,6,7));
 //        System.out.println(charger.isSportMode());
-        System.out.println(alex.driveCar(20,6,7));
+//        System.out.println(alex.driveCar(20,6,7));
 //        System.out.println(charger.isSportMode());
 //        System.out.println(elise);
-        System.out.println(Car.class.getSuperclass());
+//        System.out.println(Car.class.getSuperclass());
+
+        IDrivable d1 = new Convertible("red", "ABD", "Cooper", "Mini", 0);
+        Driver jake = new Driver(d1);
+        System.out.println(jake.driveCar(10,7,3));
+
+        IDrivable lawnmow1 = new Lawnmower("push", 0);
+        System.out.println(lawnmow1);
+
+        jake.setCar(lawnmow1);
+        System.out.println(lawnmow1.drive(10));
+
 
     }
 
